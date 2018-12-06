@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="431.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mario.desafio.controller.JogoController">
+    <children>
+      <Label fx:id="lbPrimeiroJogador" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="26.0" prefHeight="28.0" prefWidth="236.0" text="Primeiro Jogador" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Label fx:id="lbSegundoJogador" alignment="CENTER" layoutX="430.0" layoutY="25.0" prefHeight="28.0" prefWidth="236.0" text="Segundo Jogador" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <TableView fx:id="tbPersonagem01" layoutX="29.0" layoutY="53.0" prefHeight="316.0" prefWidth="236.0">
+        <columns>
+          <TableColumn fx:id="forcaCol01" prefWidth="75.0" text="Força" />
+          <TableColumn fx:id="defesaCol01" prefWidth="75.0" text="Defesa" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tbPersonagem02" layoutX="429.0" layoutY="53.0" prefHeight="316.0" prefWidth="236.0">
+         <columns>
+            <TableColumn fx:id="forcaCol02" prefWidth="75.0" text="Força" />
+            <TableColumn fx:id="defesaCol02" prefWidth="75.0" text="Defesa" />
+         </columns>
+      </TableView>
+      <Button fx:id="btPersonagem01" layoutX="280.0" layoutY="240.0" mnemonicParsing="false" onAction="#atacarP1" prefHeight="48.0" prefWidth="64.0" style="-fx-background-color: blue;" text="P1&gt;" textFill="WHITE" />
+      <Button fx:id="btPersonagem02" layoutX="348.0" layoutY="240.0" mnemonicParsing="false" onAction="#atacarP2" prefHeight="48.0" prefWidth="64.0" style="-fx-background-color: blue;" text="&lt;P2" textFill="WHITE" />
+      <Button fx:id="btNovoJogo" layoutX="280.0" layoutY="118.0" mnemonicParsing="false" onAction="#novoJogo" prefHeight="48.0" prefWidth="132.0" style="-fx-background-color: blue;" text="Novo Jogo" textFill="WHITE" />
+      <Button fx:id="btGerarPersonagens" layoutX="280.0" layoutY="181.0" mnemonicParsing="false" onAction="#gerarPersonagens" prefHeight="48.0" prefWidth="132.0" style="-fx-background-color: red;" text="Gerar Personagens" textFill="WHITE" />
+      <Label fx:id="lbGanhador" alignment="CENTER" layoutX="115.0" layoutY="378.0" prefHeight="32.0" prefWidth="467.0" text="Ganhador" textAlignment="CENTER" textFill="#1223dd">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
